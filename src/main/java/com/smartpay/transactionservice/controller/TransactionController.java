@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/api/transactions")
 public class TransactionController {
@@ -22,5 +24,10 @@ public class TransactionController {
     @ResponseStatus(HttpStatus.CREATED)
     public TransactionResponse createTransaction(@Valid @RequestBody TransactionRequest request){
         return transactionService.createTransaction(request);
+    }
+
+    @GetMapping("/{id}")
+    public TransactionResponse getTransaction(@PathVariable UUID id){
+        return transactionService.getTransaction(id);
     }
 }
