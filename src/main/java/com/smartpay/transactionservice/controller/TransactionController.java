@@ -1,5 +1,6 @@
 package com.smartpay.transactionservice.controller;
 
+import com.smartpay.transactionservice.dto.TransactionPageResponse;
 import com.smartpay.transactionservice.dto.TransactionRequest;
 import com.smartpay.transactionservice.dto.TransactionResponse;
 import com.smartpay.transactionservice.service.TransactionService;
@@ -29,5 +30,17 @@ public class TransactionController {
     @GetMapping("/{id}")
     public TransactionResponse getTransaction(@PathVariable UUID id){
         return transactionService.getTransaction(id);
+    }
+
+    @GetMapping
+    public TransactionPageResponse getAllTransactions(
+
+            @RequestParam(defaultValue = "0")
+            int page,
+
+            @RequestParam(defaultValue = "5")
+            int size) {
+
+        return transactionService.getAllTransactions(page, size);
     }
 }

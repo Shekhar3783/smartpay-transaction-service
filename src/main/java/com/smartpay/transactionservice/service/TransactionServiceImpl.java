@@ -1,5 +1,6 @@
 package com.smartpay.transactionservice.service;
 
+import com.smartpay.transactionservice.dto.TransactionPageResponse;
 import com.smartpay.transactionservice.dto.TransactionRequest;
 import com.smartpay.transactionservice.dto.TransactionResponse;
 import com.smartpay.transactionservice.entity.Transaction;
@@ -7,8 +8,12 @@ import com.smartpay.transactionservice.exception.TransactionNotFoundException;
 import com.smartpay.transactionservice.repository.TransactionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Slf4j
@@ -72,5 +77,50 @@ public class TransactionServiceImpl implements TransactionService{
                 .createdAt(transaction.getCreatedAt())
                 .build();
 
+    }
+
+    @Override
+    public TransactionPageResponse getAllTransactions(int page, int size) {
+
+        /*
+         * Create Pageable object
+         *
+         * page = 0
+         * size = 5
+         */
+        Pageable pageable= PageRequest.of(page, size);
+
+        log.info("fetching transactions page {} size {} ",page,size);
+
+        /*
+         * Hibernate executes:
+         * select *  from transactions limit size offset page*size
+         */
+
+        Page<Transaction> transactionPage=transactionRepository.findAll(pageable);
+
+        //Convert Entity -> Dto Response*/
+
+        List<TransactionResponse>responses=
+                transactionPage.getContent()
+                        .stream()
+                        .map(transaction->
+                                TransactionResponse.builder()
+                                .id(transaction.getId())
+                                        .userId(transaction.getUserId())
+                                        .amount(transaction.getAmount())
+                                        .merchantName(transaction.getMerchantName())
+                                        .createdAt(transaction.getCreatedAt())
+                                        .build())
+                        .toList();
+
+        log.info("Found {} transactions ",+responses.size());
+
+        return TransactionPageResponse.builder()
+                .transactions(responses)
+                .currentPage(transactionPage.getNumber())
+                .totalPages(transactionPage.getTotalPages())
+                .totalElements(transactionPage.getTotalElements())
+                .build();
     }
 }

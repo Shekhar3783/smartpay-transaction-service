@@ -1,7 +1,9 @@
 package com.smartpay.transactionservice.exception;
 
+import com.smartpay.transactionservice.dto.ErrorResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -16,33 +18,53 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(TransactionNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Map<String,Object> handleTransactionNotFound(TransactionNotFoundException exception){
+    public ErrorResponse handleTransactionNotFound(TransactionNotFoundException exception){
 
         log.error("TransactionNotFoundException occurred : {}",
                 exception.getMessage());
 
-        Map<String, Object> response = new HashMap<>();
+       return ErrorResponse.builder()
+               .timestamp(OffsetDateTime.now())
+               .status(HttpStatus.NOT_FOUND.value())
+               .message(exception.getMessage())
+               .build();
+    }
 
-        response.put("timestamp", OffsetDateTime.now());
-        response.put("status", 404);
-        response.put("message", exception.getMessage());
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handelValidationException(MethodArgumentNotValidException exception){
 
-        return response;
+        log.error("Validation Exception");
+
+        Map<String,String> errors=new HashMap<>();
+
+        exception.getBindingResult()
+                .getFieldErrors()
+                .forEach(error->
+                        errors.put(error.getField(),
+                                error.getDefaultMessage()));
+
+        return ErrorResponse.builder()
+                .timestamp(OffsetDateTime.now())
+                .status(HttpStatus.BAD_REQUEST.value())
+                .message("Validation Failed")
+                .errors(errors)
+                .build();
+
     }
 
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public Map<String, Object> handleGenericException(
+    public ErrorResponse handleGenericException(
             Exception ex) {
 
         log.error("Unexpected exception occurred", ex);
 
-        Map<String, Object> response = new HashMap<>();
+        return ErrorResponse.builder()
+                .timestamp(OffsetDateTime.now())
+                .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                .message("Internal server error")
+                .build();
 
-        response.put("timestamp", OffsetDateTime.now());
-        response.put("status", 500);
-        response.put("message", "Internal Server Error");
-
-        return response;
     }
 }
