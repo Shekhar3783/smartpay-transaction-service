@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -79,34 +80,67 @@ public class TransactionServiceImpl implements TransactionService{
 
     }
 
+ 
+
     @Override
-    public TransactionPageResponse getAllTransactions(int page, int size) {
+    public TransactionPageResponse getTransactions(String userId, int page, int size, String sortBy, String direction) {
+        log.info(
+                "Fetching transactions for user {} page {} size {} sortBy {} direction {}",
+                userId,
+                page,
+                size,
+                sortBy,
+                direction
+        );
+
+
+        Sort sort
+                =direction.equalsIgnoreCase("desc")
+                ? Sort.by(sortBy).descending()
+                :Sort.by(sortBy).ascending();
 
         /*
-         * Create Pageable object
+         * Creates:
          *
-         * page = 0
-         * size = 5
+         * page=0
+         * size=5
+         * sort=createdAt desc
          */
-        Pageable pageable= PageRequest.of(page, size);
+        Pageable pageable =
+                PageRequest.of(
+                        page,
+                        size,
+                        sort
+                );
 
-        log.info("fetching transactions page {} size {} ",page,size);
+        //If userID present execute filtered query
 
+        Page<Transaction> transactionPage;
+
+        if (userId != null && !userId.isBlank()) {
+
+            transactionPage =
+                    transactionRepository.findByUserId(
+                            userId,
+                            pageable);
+
+        } else {
+            /*
+             * Fetch all users
+             */
+            transactionPage =
+                    transactionRepository.findAll(
+                            pageable);
+        }
         /*
-         * Hibernate executes:
-         * select *  from transactions limit size offset page*size
+         * Convert Entity -> DTO
          */
-
-        Page<Transaction> transactionPage=transactionRepository.findAll(pageable);
-
-        //Convert Entity -> Dto Response*/
-
-        List<TransactionResponse>responses=
+        List<TransactionResponse> responses =
                 transactionPage.getContent()
                         .stream()
-                        .map(transaction->
+                        .map(transaction ->
                                 TransactionResponse.builder()
-                                .id(transaction.getId())
+                                        .id(transaction.getId())
                                         .userId(transaction.getUserId())
                                         .amount(transaction.getAmount())
                                         .merchantName(transaction.getMerchantName())
@@ -114,13 +148,15 @@ public class TransactionServiceImpl implements TransactionService{
                                         .build())
                         .toList();
 
-        log.info("Found {} transactions ",+responses.size());
-
         return TransactionPageResponse.builder()
                 .transactions(responses)
-                .currentPage(transactionPage.getNumber())
-                .totalPages(transactionPage.getTotalPages())
-                .totalElements(transactionPage.getTotalElements())
+                .currentPage(
+                        transactionPage.getNumber())
+                .totalPages(
+                        transactionPage.getTotalPages())
+                .totalElements(
+                        transactionPage.getTotalElements())
                 .build();
-    }
+        }
+
 }

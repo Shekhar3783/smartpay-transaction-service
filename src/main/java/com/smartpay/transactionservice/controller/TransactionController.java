@@ -32,15 +32,26 @@ public class TransactionController {
         return transactionService.getTransaction(id);
     }
 
+
+
     @GetMapping
-    public TransactionPageResponse getAllTransactions(
+    public TransactionPageResponse getTransactions(
+
+            @RequestParam(required = false)
+            String userId,
 
             @RequestParam(defaultValue = "0")
             int page,
 
             @RequestParam(defaultValue = "5")
-            int size) {
+            int size,
 
-        return transactionService.getAllTransactions(page, size);
+            @RequestParam(defaultValue = "createdAt")
+            String sortBy,
+
+            @RequestParam(defaultValue = "desc")
+            String direction) {
+
+        return transactionService.getTransactions(userId, page, size, sortBy, direction);
     }
 }

@@ -11,5 +11,8 @@ public interface TransactionService {
 
     TransactionResponse getTransaction(UUID id);
 
-    TransactionPageResponse getAllTransactions(int page,int size);
+
+
+      //Filtering + Sorting API
+    TransactionPageResponse getTransactions(String userId, int page, int size, String sortBy,String direction);
 }
