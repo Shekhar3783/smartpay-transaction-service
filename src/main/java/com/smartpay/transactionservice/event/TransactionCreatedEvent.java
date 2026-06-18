@@ -1,10 +1,11 @@
 package com.smartpay.transactionservice.event;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public class TransactionCreatedEvent {
 
-    private Long transactionId;
+    private String transactionId;
 
     private String userId;
 
@@ -15,18 +16,18 @@ public class TransactionCreatedEvent {
     public TransactionCreatedEvent() {
     }
 
-    public TransactionCreatedEvent(Long transactionId, String userId, BigDecimal amount, String merchantName) {
+    public TransactionCreatedEvent(String transactionId, String userId, BigDecimal amount, String merchantName) {
         this.transactionId = transactionId;
         this.userId = userId;
         this.amount = amount;
         this.merchantName = merchantName;
     }
 
-    public Long getTransactionId() {
+    public String getTransactionId() {
         return transactionId;
     }
 
-    public void setTransactionId(Long transactionId) {
+    public void setTransactionId(String transactionId) {
         this.transactionId = transactionId;
     }
 

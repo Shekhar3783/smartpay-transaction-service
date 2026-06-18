@@ -4,7 +4,9 @@ import com.smartpay.transactionservice.dto.TransactionPageResponse;
 import com.smartpay.transactionservice.dto.TransactionRequest;
 import com.smartpay.transactionservice.dto.TransactionResponse;
 import com.smartpay.transactionservice.entity.Transaction;
+import com.smartpay.transactionservice.event.TransactionCreatedEvent;
 import com.smartpay.transactionservice.exception.TransactionNotFoundException;
+import com.smartpay.transactionservice.producer.TransactionEventProducer;
 import com.smartpay.transactionservice.repository.TransactionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +25,11 @@ public class TransactionServiceImpl implements TransactionService{
 
     private final TransactionRepository transactionRepository;
 
-    public TransactionServiceImpl(TransactionRepository transactionRepository) {
+    private final TransactionEventProducer transactionEventProducer;
+
+    public TransactionServiceImpl(TransactionRepository transactionRepository, TransactionEventProducer transactionEventProducer) {
         this.transactionRepository = transactionRepository;
+        this.transactionEventProducer = transactionEventProducer;
     }
 
     @Override
@@ -44,9 +49,16 @@ public class TransactionServiceImpl implements TransactionService{
         log.info("Saving transaction into database");
 
         Transaction savedTransaction=transactionRepository.save(transaction);
-
         log.info("Transaction saved successfully with id {}",
                 savedTransaction.getId());
+
+
+        TransactionCreatedEvent event=new TransactionCreatedEvent(savedTransaction.
+                getId().toString(), savedTransaction.getUserId(), savedTransaction.getAmount(),savedTransaction.getMerchantName());
+
+        transactionEventProducer.publishTransactionCreatedEvent(event);
+
+       log.info("record sent to kafka topic");
 
         return TransactionResponse.builder()
                 .id(savedTransaction.getId())

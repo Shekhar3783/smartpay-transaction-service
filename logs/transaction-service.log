@@ -1,14 +1,234 @@
-2026-06-15T17:48:25.386+05:30  INFO 25920 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Starting TransactionControllerTest using Java 21.0.11 with PID 25920 (started by Shekhar in D:\IdeaProjects\smartpay-transaction-service)
-2026-06-15T17:48:25.393+05:30 DEBUG 25920 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-06-15T17:48:25.393+05:30  INFO 25920 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-06-15T17:48:27.558+05:30  INFO 25920 --- [transaction-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-06-15T17:48:27.558+05:30  INFO 25920 --- [transaction-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-06-15T17:48:27.565+05:30  INFO 25920 --- [transaction-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
-2026-06-15T17:48:27.588+05:30  INFO 25920 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Started TransactionControllerTest in 2.639 seconds (process running for 3.625)
-2026-06-15T17:49:09.896+05:30  INFO 14380 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Starting TransactionControllerTest using Java 21.0.11 with PID 14380 (started by Shekhar in D:\IdeaProjects\smartpay-transaction-service)
-2026-06-15T17:49:09.906+05:30 DEBUG 14380 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Running with Spring Boot v3.5.15, Spring v6.2.19
-2026-06-15T17:49:09.906+05:30  INFO 14380 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : No active profile set, falling back to 1 default profile: "default"
-2026-06-15T17:49:11.790+05:30  INFO 14380 --- [transaction-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-06-15T17:49:11.790+05:30  INFO 14380 --- [transaction-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-06-15T17:49:11.790+05:30  INFO 14380 --- [transaction-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-06-15T17:49:11.825+05:30  INFO 14380 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Started TransactionControllerTest in 2.308 seconds (process running for 3.156)
+2026-06-17T20:40:17.428+05:30  INFO 7952 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Starting TransactionControllerTest using Java 21.0.11 with PID 7952 (started by Shekhar in D:\IdeaProjects\smartpay-transaction-service)
+2026-06-17T20:40:17.428+05:30 DEBUG 7952 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-06-17T20:40:17.428+05:30  INFO 7952 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-17T20:40:21.767+05:30  INFO 7952 --- [transaction-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-17T20:40:21.767+05:30  INFO 7952 --- [transaction-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-17T20:40:21.767+05:30  INFO 7952 --- [transaction-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-06-17T20:40:21.830+05:30  INFO 7952 --- [transaction-service] [main] c.s.t.c.TransactionControllerTest        : Started TransactionControllerTest in 5.112 seconds (process running for 7.064)
+2026-06-17T20:42:40.033+05:30  INFO 2540 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Starting TransactionServiceApplication using Java 21.0.11 with PID 2540 (D:\IdeaProjects\smartpay-transaction-service\target\classes started by Shekhar in D:\IdeaProjects\smartpay-transaction-service)
+2026-06-17T20:42:40.033+05:30 DEBUG 2540 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-06-17T20:42:40.033+05:30  INFO 2540 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-06-17T20:42:42.160+05:30  INFO 2540 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-17T20:42:42.160+05:30  INFO 2540 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-17T20:42:42.382+05:30  INFO 2540 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 204 ms. Found 1 JPA repository interface.
+2026-06-17T20:42:42.430+05:30  INFO 2540 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-17T20:42:42.430+05:30  INFO 2540 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-17T20:42:42.462+05:30  INFO 2540 --- [transaction-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.smartpay.transactionservice.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-06-17T20:42:42.462+05:30  INFO 2540 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-06-17T20:42:43.748+05:30  INFO 2540 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-17T20:42:43.780+05:30  INFO 2540 --- [transaction-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-17T20:42:43.780+05:30  INFO 2540 --- [transaction-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-17T20:42:43.892+05:30  INFO 2540 --- [transaction-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-17T20:42:43.892+05:30  INFO 2540 --- [transaction-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3780 ms
+2026-06-17T20:42:44.413+05:30  INFO 2540 --- [transaction-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-17T20:42:44.520+05:30  INFO 2540 --- [transaction-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-17T20:42:44.585+05:30  INFO 2540 --- [transaction-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-17T20:42:45.096+05:30  INFO 2540 --- [transaction-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-17T20:42:45.140+05:30  INFO 2540 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-17T20:42:45.601+05:30  INFO 2540 --- [transaction-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60a99f3d
+2026-06-17T20:42:45.601+05:30  INFO 2540 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-17T20:42:45.728+05:30  INFO 2540 --- [transaction-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-17T20:42:47.117+05:30  INFO 2540 --- [transaction-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-17T20:42:47.235+05:30  INFO 2540 --- [transaction-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-17T20:42:47.873+05:30  WARN 2540 --- [transaction-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-17T20:42:49.546+05:30  INFO 2540 --- [transaction-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-17T20:42:49.701+05:30  INFO 2540 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-06-17T20:42:49.725+05:30  INFO 2540 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Started TransactionServiceApplication in 10.441 seconds (process running for 10.979)
+2026-06-17T20:44:08.354+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-17T20:44:08.354+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-17T20:44:08.359+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-06-17T20:44:08.742+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER005 amount 5000
+2026-06-17T20:44:08.746+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-06-17T20:44:09.046+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 36ad1839-4501-4b7e-b179-614e595c8874
+2026-06-17T20:44:09.129+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = transaction-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-06-17T20:44:09.246+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-06-17T20:44:09.313+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=transaction-service-producer-1] Instantiated an idempotent producer.
+2026-06-17T20:44:09.446+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.2
+2026-06-17T20:44:09.455+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e9866f43ab8e7e4
+2026-06-17T20:44:09.455+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1781709249446
+2026-06-17T20:44:10.654+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] The metadata response from the cluster reported a recoverable issue with correlation id 1 : {transaction-created=UNKNOWN_TOPIC_OR_PARTITION}
+2026-06-17T20:44:10.659+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=transaction-service-producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-06-17T20:44:10.811+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=transaction-service-producer-1] ProducerId set to 0 with epoch 0
+2026-06-17T20:44:10.914+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 36ad1839-4501-4b7e-b179-614e595c8874
+2026-06-17T20:44:10.914+05:30  INFO 2540 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-06-17T20:57:02.057+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:02.060+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node -1 disconnected.
+2026-06-17T20:57:02.181+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:02.182+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 13 due to node 1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-17T20:57:02.423+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:02.426+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 14 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-17T20:57:02.772+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:02.773+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 15 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-17T20:57:03.274+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:03.275+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:04.144+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:04.148+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:05.098+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:05.100+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:06.160+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:06.160+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:07.178+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:07.178+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:08.193+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:08.196+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:09.210+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:09.210+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:10.218+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:10.218+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:11.235+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:11.235+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:12.129+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:12.129+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:13.144+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:13.144+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:14.146+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:14.146+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:15.154+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:15.154+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:16.160+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:16.160+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:17.176+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:17.183+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:18.186+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:18.192+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:19.197+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:19.199+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:20.202+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:20.210+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:21.211+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:21.211+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:22.216+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:22.218+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:23.228+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:23.228+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:24.279+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:24.281+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:25.286+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:25.286+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:26.286+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:26.286+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:27.314+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:27.316+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:28.321+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:28.321+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:29.332+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:29.334+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:30.336+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:30.336+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:31.340+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:31.343+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:32.343+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:32.345+05:30  WARN 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-06-17T20:57:33.359+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:33.360+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 16 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-17T20:57:34.377+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:34.377+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 17 due to node 1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-17T20:57:35.393+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:35.395+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 18 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-17T20:57:36.410+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Node 1 disconnected.
+2026-06-17T20:57:36.411+05:30  INFO 2540 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=transaction-service-producer-1] Cancelled in-flight API_VERSIONS request with correlation id 19 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-06-17T21:46:01.183+05:30  WARN 2540 --- [transaction-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m15s25ms440µs).
+2026-06-17T22:22:46.076+05:30  WARN 2540 --- [transaction-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m44s809ms429µs100ns).
