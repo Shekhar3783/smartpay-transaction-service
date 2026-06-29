@@ -10,6 +10,7 @@ import com.smartpay.transactionservice.producer.TransactionEventProducer;
 import com.smartpay.transactionservice.repository.TransactionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -72,6 +73,7 @@ public class TransactionServiceImpl implements TransactionService{
     }
 
     @Override
+    @Cacheable(value = "transactions", key = "#id")
     public TransactionResponse getTransaction(UUID id) {
 
         log.info("Fetching transaction with id {}", id);
