@@ -54,8 +54,11 @@ public class TransactionServiceImpl implements TransactionService{
                 savedTransaction.getId());
 
 
-        TransactionCreatedEvent event=new TransactionCreatedEvent(savedTransaction.
-                getId().toString(), savedTransaction.getUserId(), savedTransaction.getAmount(),savedTransaction.getMerchantName());
+        TransactionCreatedEvent event=new TransactionCreatedEvent(savedTransaction.getId().toString(),
+                savedTransaction.getUserId(),
+                savedTransaction.getAmount(),
+                savedTransaction.getMerchantName(),
+                savedTransaction.getCreatedAt());
 
         transactionEventProducer.publishTransactionCreatedEvent(event);
 
