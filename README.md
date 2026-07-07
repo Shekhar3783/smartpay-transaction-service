@@ -102,6 +102,36 @@ src
 - CI/CD Pipeline
 
 ---
+## How to Run Locally
+
+### Prerequisites
+- Java 21
+- Maven 3.9+
+- Docker Desktop
+
+### Step 1 — Start Infrastructure
+git clone https://github.com/Shekhar3783/smartpay-transaction-service
+
+cd smartpay-transaction-service
+
+docker-compose up -d
+
+### Step 2 — Run the Service
+mvn spring-boot:run
+
+### Step 3 — Test the API
+POST http://localhost:8081/api/v1/transactions
+
+Body:
+{
+  "userId": "USR-001",
+  "amount": 15000,
+  "merchant": "The Great Kabab Factory",
+  "category": "DINING",
+  "channel": "UPI"
+}
+
+Expected: 201 Created
 
 ## Author
 
