@@ -1,5 +1,388 @@
-2026-06-30T00:59:15.720+05:30  INFO 18068 --- [transaction-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-06-30T00:59:15.788+05:30  INFO 18068 --- [transaction-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-06-30T00:59:15.871+05:30  INFO 18068 --- [transaction-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-30T00:59:15.893+05:30  INFO 18068 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-30T00:59:15.907+05:30  INFO 18068 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-04T11:31:10.821+05:30  INFO 23964 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Starting TransactionServiceApplication using Java 21.0.11 with PID 23964 (D:\IdeaProjects\smartpay-transaction-service\target\classes started by Shekhar in D:\IdeaProjects\smartpay-transaction-service)
+2026-07-04T11:31:10.839+05:30 DEBUG 23964 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-07-04T11:31:10.839+05:30  INFO 23964 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-07-04T11:31:12.978+05:30  INFO 23964 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-04T11:31:12.978+05:30  INFO 23964 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-04T11:31:13.233+05:30  INFO 23964 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 226 ms. Found 1 JPA repository interface.
+2026-07-04T11:31:13.279+05:30  INFO 23964 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-04T11:31:13.281+05:30  INFO 23964 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-04T11:31:13.329+05:30  INFO 23964 --- [transaction-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.smartpay.transactionservice.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-04T11:31:13.329+05:30  INFO 23964 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2026-07-04T11:31:14.626+05:30  INFO 23964 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-04T11:31:14.658+05:30  INFO 23964 --- [transaction-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-04T11:31:14.674+05:30  INFO 23964 --- [transaction-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-04T11:31:14.770+05:30  INFO 23964 --- [transaction-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-04T11:31:14.770+05:30  INFO 23964 --- [transaction-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3830 ms
+2026-07-04T11:31:15.877+05:30  INFO 23964 --- [transaction-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-04T11:31:15.958+05:30  INFO 23964 --- [transaction-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-04T11:31:16.009+05:30  INFO 23964 --- [transaction-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-04T11:31:16.450+05:30  INFO 23964 --- [transaction-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-04T11:31:16.488+05:30  INFO 23964 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-04T11:31:16.946+05:30  INFO 23964 --- [transaction-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4dffa400
+2026-07-04T11:31:16.947+05:30  INFO 23964 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-04T11:31:17.042+05:30  INFO 23964 --- [transaction-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-04T11:31:18.476+05:30  INFO 23964 --- [transaction-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-04T11:31:18.545+05:30  INFO 23964 --- [transaction-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-04T11:31:19.250+05:30  WARN 23964 --- [transaction-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-04T11:31:20.271+05:30  INFO 23964 --- [transaction-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-04T11:31:20.398+05:30  INFO 23964 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-04T11:31:20.414+05:30  INFO 23964 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Started TransactionServiceApplication in 10.457 seconds (process running for 11.163)
+2026-07-04T11:33:38.787+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-04T11:33:38.788+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-04T11:33:38.792+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-07-04T11:33:39.271+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER0010 amount 50000
+2026-07-04T11:33:39.272+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-07-04T11:33:39.538+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 96873db8-d598-4073-8e4c-7c57406ac25e
+2026-07-04T11:33:39.626+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = transaction-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-07-04T11:33:39.705+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-07-04T11:33:39.755+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=transaction-service-producer-1] Instantiated an idempotent producer.
+2026-07-04T11:33:39.871+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.2
+2026-07-04T11:33:39.871+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e9866f43ab8e7e4
+2026-07-04T11:33:39.871+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1783145019867
+2026-07-04T11:33:40.618+05:30  INFO 23964 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=transaction-service-producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-07-04T11:33:40.726+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 96873db8-d598-4073-8e4c-7c57406ac25e
+2026-07-04T11:33:40.728+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-1] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-07-04T11:33:40.750+05:30  INFO 23964 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=transaction-service-producer-1] ProducerId set to 0 with epoch 0
+2026-07-04T11:43:44.365+05:30  WARN 23964 --- [transaction-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m27s186ms310µs100ns).
+2026-07-04T12:23:01.330+05:30 ERROR 23964 --- [transaction-service] [http-nio-8080-exec-10] c.s.t.exception.GlobalExceptionHandler   : Validation Exception
+2026-07-04T12:23:09.803+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-8] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER0011 amount 50000
+2026-07-04T12:23:09.803+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-8] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-07-04T12:23:09.849+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-8] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 4fc558e3-f261-4e7b-94a8-ac8ea1cda131
+2026-07-04T12:23:09.875+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-8] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 4fc558e3-f261-4e7b-94a8-ac8ea1cda131
+2026-07-04T12:23:09.875+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-8] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-07-04T12:33:29.558+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-4] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER0012 amount 30000
+2026-07-04T12:33:29.560+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-4] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-07-04T12:33:29.582+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-4] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 9f6a6ebf-2643-48ac-85b5-f068d1ab9ce5
+2026-07-04T12:33:29.592+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-4] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 9f6a6ebf-2643-48ac-85b5-f068d1ab9ce5
+2026-07-04T12:33:29.593+05:30  INFO 23964 --- [transaction-service] [http-nio-8080-exec-4] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-07-04T12:40:19.814+05:30  WARN 23964 --- [transaction-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m30s84ms426µs500ns).
+2026-07-04T13:04:10.626+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-04T13:04:10.640+05:30  INFO 23964 --- [transaction-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-04T13:04:10.676+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=transaction-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-07-04T13:04:10.700+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-07-04T13:04:10.700+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-07-04T13:04:10.700+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-07-04T13:04:10.703+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-07-04T13:04:10.703+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for transaction-service-producer-1 unregistered
+2026-07-04T13:04:10.727+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-04T13:04:10.740+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-04T13:04:10.740+05:30  INFO 23964 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-04T18:07:47.664+05:30  INFO 17084 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Starting TransactionServiceApplication using Java 21.0.11 with PID 17084 (D:\IdeaProjects\smartpay-transaction-service\target\classes started by Shekhar in D:\IdeaProjects\smartpay-transaction-service)
+2026-07-04T18:07:47.664+05:30 DEBUG 17084 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-07-04T18:07:47.664+05:30  INFO 17084 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-07-04T18:07:48.767+05:30  INFO 17084 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-04T18:07:48.767+05:30  INFO 17084 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-04T18:07:48.909+05:30  INFO 17084 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interface.
+2026-07-04T18:07:48.937+05:30  INFO 17084 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-04T18:07:48.941+05:30  INFO 17084 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-04T18:07:48.957+05:30  INFO 17084 --- [transaction-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.smartpay.transactionservice.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-04T18:07:48.957+05:30  INFO 17084 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-07-04T18:07:49.654+05:30  INFO 17084 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-04T18:07:49.670+05:30  INFO 17084 --- [transaction-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-04T18:07:49.670+05:30  INFO 17084 --- [transaction-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-04T18:07:49.725+05:30  INFO 17084 --- [transaction-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-04T18:07:49.725+05:30  INFO 17084 --- [transaction-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2016 ms
+2026-07-04T18:07:50.349+05:30  INFO 17084 --- [transaction-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-04T18:07:50.407+05:30  INFO 17084 --- [transaction-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-04T18:07:50.435+05:30  INFO 17084 --- [transaction-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-04T18:07:50.632+05:30  INFO 17084 --- [transaction-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-04T18:07:50.658+05:30  INFO 17084 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-04T18:07:50.894+05:30  INFO 17084 --- [transaction-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6b630d4b
+2026-07-04T18:07:50.894+05:30  INFO 17084 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-04T18:07:50.949+05:30  INFO 17084 --- [transaction-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-04T18:07:51.674+05:30  INFO 17084 --- [transaction-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-04T18:07:51.715+05:30  INFO 17084 --- [transaction-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-04T18:07:52.136+05:30  WARN 17084 --- [transaction-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-04T18:07:52.853+05:30  INFO 17084 --- [transaction-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-04T18:07:52.948+05:30  INFO 17084 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-04T18:07:52.958+05:30  INFO 17084 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Started TransactionServiceApplication in 5.737 seconds (process running for 6.101)
+2026-07-04T18:08:26.985+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-04T18:08:26.985+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-04T18:08:26.985+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-04T18:08:27.303+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER014 amount 500
+2026-07-04T18:08:27.303+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-07-04T18:08:27.536+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 567a153d-2543-431a-8af7-4bee5e59d987
+2026-07-04T18:08:27.596+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = transaction-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-07-04T18:08:27.665+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-07-04T18:08:27.717+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=transaction-service-producer-1] Instantiated an idempotent producer.
+2026-07-04T18:08:27.816+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.2
+2026-07-04T18:08:27.816+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e9866f43ab8e7e4
+2026-07-04T18:08:27.816+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1783168707816
+2026-07-04T18:08:28.532+05:30  INFO 17084 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=transaction-service-producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-07-04T18:08:28.534+05:30  INFO 17084 --- [transaction-service] [kafka-producer-network-thread | transaction-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=transaction-service-producer-1] ProducerId set to 1 with epoch 0
+2026-07-04T18:08:28.583+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 567a153d-2543-431a-8af7-4bee5e59d987
+2026-07-04T18:08:28.594+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-6] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-07-04T18:08:41.216+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-3] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER014 amount 400
+2026-07-04T18:08:41.216+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-3] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-07-04T18:08:41.223+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-3] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 9fa3e080-2c4a-4478-8112-a4d5b153f3d2
+2026-07-04T18:08:41.223+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-3] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 9fa3e080-2c4a-4478-8112-a4d5b153f3d2
+2026-07-04T18:08:41.223+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-3] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-07-04T18:08:52.325+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-10] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER014 amount 100
+2026-07-04T18:08:52.327+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-10] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-07-04T18:08:52.331+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-10] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 2309b09b-ce5f-4304-a9d0-bdae1498c005
+2026-07-04T18:08:52.335+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-10] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 2309b09b-ce5f-4304-a9d0-bdae1498c005
+2026-07-04T18:08:52.335+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-10] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-07-04T18:09:10.565+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-5] c.s.t.service.TransactionServiceImpl     : Received transaction creation request for user USER015 amount 1000
+2026-07-04T18:09:10.565+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-5] c.s.t.service.TransactionServiceImpl     : Saving transaction into database
+2026-07-04T18:09:10.578+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-5] c.s.t.service.TransactionServiceImpl     : Transaction saved successfully with id 0b29aa50-1011-45ad-9d46-25b7b7972df7
+2026-07-04T18:09:10.581+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-5] c.s.t.producer.TransactionEventProducer  : Transaction event published to Kafka. Transaction Id: 0b29aa50-1011-45ad-9d46-25b7b7972df7
+2026-07-04T18:09:10.581+05:30  INFO 17084 --- [transaction-service] [http-nio-8080-exec-5] c.s.t.service.TransactionServiceImpl     : record sent to kafka topic
+2026-07-04T18:37:21.081+05:30  WARN 17084 --- [transaction-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m59s598ms235µs600ns).
+2026-07-04T18:47:34.307+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-04T18:47:34.329+05:30  INFO 17084 --- [transaction-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-04T18:47:34.335+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=transaction-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-07-04T18:47:34.352+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-07-04T18:47:34.352+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-07-04T18:47:34.352+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-07-04T18:47:34.352+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-07-04T18:47:34.352+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for transaction-service-producer-1 unregistered
+2026-07-04T18:47:34.362+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-04T18:47:34.367+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-04T18:47:34.376+05:30  INFO 17084 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-04T19:01:29.318+05:30  INFO 28404 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Starting TransactionServiceApplication using Java 21.0.11 with PID 28404 (D:\IdeaProjects\smartpay-transaction-service\target\classes started by Shekhar in D:\IdeaProjects\smartpay-transaction-service)
+2026-07-04T19:01:29.318+05:30 DEBUG 28404 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-07-04T19:01:29.318+05:30  INFO 28404 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-07-04T19:01:30.572+05:30  INFO 28404 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-04T19:01:30.572+05:30  INFO 28404 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-04T19:01:30.678+05:30  INFO 28404 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interface.
+2026-07-04T19:01:30.708+05:30  INFO 28404 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-04T19:01:30.708+05:30  INFO 28404 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-04T19:01:30.725+05:30  INFO 28404 --- [transaction-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.smartpay.transactionservice.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-04T19:01:30.725+05:30  INFO 28404 --- [transaction-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-07-04T19:01:31.465+05:30  INFO 28404 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-04T19:01:31.487+05:30  INFO 28404 --- [transaction-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-04T19:01:31.487+05:30  INFO 28404 --- [transaction-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-04T19:01:31.537+05:30  INFO 28404 --- [transaction-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-04T19:01:31.537+05:30  INFO 28404 --- [transaction-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2168 ms
+2026-07-04T19:01:32.073+05:30  INFO 28404 --- [transaction-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-04T19:01:32.122+05:30  INFO 28404 --- [transaction-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-04T19:01:32.167+05:30  INFO 28404 --- [transaction-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-04T19:01:32.407+05:30  INFO 28404 --- [transaction-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-04T19:01:32.423+05:30  INFO 28404 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-04T19:01:32.698+05:30  INFO 28404 --- [transaction-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1bf10539
+2026-07-04T19:01:32.698+05:30  INFO 28404 --- [transaction-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-04T19:01:32.761+05:30  INFO 28404 --- [transaction-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-04T19:01:33.469+05:30  INFO 28404 --- [transaction-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-04T19:01:33.525+05:30  INFO 28404 --- [transaction-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-04T19:01:33.959+05:30  WARN 28404 --- [transaction-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-04T19:01:34.774+05:30  INFO 28404 --- [transaction-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-04T19:01:34.874+05:30  INFO 28404 --- [transaction-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-04T19:01:34.890+05:30  INFO 28404 --- [transaction-service] [main] c.s.t.TransactionServiceApplication      : Started TransactionServiceApplication in 6.056 seconds (process running for 6.442)
+2026-07-04T19:01:34.890+05:30  INFO 28404 --- [transaction-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-04T19:01:34.902+05:30  INFO 28404 --- [transaction-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-04T19:01:34.916+05:30  INFO 28404 --- [transaction-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-04T19:01:34.921+05:30  INFO 28404 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-04T19:01:34.930+05:30  INFO 28404 --- [transaction-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
